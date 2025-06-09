@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ingressos</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Tela de Lista de Ingressos -->
+  <div id="tela-ingressos">
+    <header class="topo">
+      <h1 class="titulo">Ingressos</h1>
+    </header>
+
+    <main class="conteudo">
+      <div id="lista-ingressos" class="event-list"></div>
+    </main>
+
+    <footer class="rodape">
+      <a href="index.html">Eventos</a>
+      <a href="#" class="ativo">Ingressos</a>
+    </footer>
+  </div>
+
+  <!-- Tela de Detalhes do Ingresso -->
+  <div id="tela-ingresso-detalhe" style="display: none;">
+    <header class="topo">
+      <h1 class="titulo" id="ingresso-nome-evento">Nome do Evento</h1>
+    </header>
+
+    <main class="conteudo">
+      <p><strong>🗓️</strong> <span id="ingresso-data"></span></p>
+      <p><strong>📍</strong> <span id="ingresso-local"></span></p>
+
+      <h3>Ingresso</h3>
+      <div class="ingresso-detalhe">
+        <p><strong>Preço:</strong> <span id="ingresso-preco"></span></p>
+        <p><strong>Participante:</strong> Participante</p>
+        <div id="qrcode"></div>
+      </div>
+
+      <button class="botao-voltar" id="voltar-btn">Voltar</button>
+    </main>
+
+    <footer class="rodape">
+      <a href="eventos.html">Eventos</a>
+      <a href="#" class="ativo">Ingressos</a>
+    </footer>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/qrcodejs/qrcode.min.js"></script>
+  <script src="ingressos.js"></script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eventos Acadêmicos</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Tela de Lista de Eventos -->
+  <div id="tela-eventos">
+    <header class="topo">
+      <h1 class="titulo">Eventos</h1>
+    </header>
+
+    <main class="conteudo">
+      <div class="event-card">
+        <img src="img/Evento1.jpeg" alt="Fundamentos de Design Thinking">
+        <h2>Fundamentos de Design Thinking</h2>
+        <p>🗓️ 14/06/2025 - 08h às 17h<br>📍 Laboratório de ideação</p>
+        <button class="botao-azul" onclick="mostrarInscricao('Fundamentos de Design Thinking', '14/06/2025 - 08h às 17h', 'Laboratório de ideação', 'Neste curso você conhecerá o processo criativo para o desenvolvimento de projetos que é utilizado nas mais importantes organizações do mundo. Entenderá a sua dinâmica e os principais conceitos, como: empatia colaboração e experimentação. Participará de um desafio e vivenciará uma dinâmica utilizando na prática uma sequência de ferramentas essenciais para iniciar um projeto.', 'R$ 54,00')">Inscrever-se</button>
+      </div>
+
+      <div class="event-card">
+        <img src="img/Evento2.jpeg" alt="Workshop de Comunicação">
+        <h2>Workshop de Comunicação</h2>
+        <p>🗓️ 27/05/2025 - 18h15<br>📍 Teatro Inatel</p>
+        <button class="botao-azul" onclick="mostrarInscricao('Workshop de Comunicação', '27/05/2025 - 18h15', 'Teatro Inatel', 'Um workshop organizado pelo Mind++, para explorar a importância da comunicação clara e assertiva dentro da sua equipe. Participe e ganhe button na categoria Comunicação.', 'R$ 0,00')">Inscrever-se</button>
+      </div>
+    </main>
+
+    <!-- Rodapé fixo -->
+    <footer class="rodape">
+      <a href="#" class="ativo">Eventos</a>
+      <a href="ingressos.html">Ingressos</a>
+    </footer>
+  </div>
+
+  <!-- Tela de Inscrição -->
+  <div id="tela-inscricao" style="display: none;">
+    <header class="topo">
+      <h1 class="titulo">Inscrição</h1>
+    </header>
+
+    <main class="conteudo">
+      <h2 id="inscricao-nome"></h2>
+      <p>🗓️ <span id="inscricao-data"></span></p>
+      <p>📍 <span id="inscricao-local"></span></p>
+
+      <h3>Descrição</h3>
+      <p id="inscricao-descricao"></p>
+
+      <h3>Dados do participante</h3>
+      <p>Nome: Participante<br>Email: usuario@email.com</p>
+
+      <h3>Preço</h3>
+      <p id="inscricao-preco"></p>
+
+      <button class="botao-azul" onclick="confirmarInscricao()">Confirmar Inscrição</button>
+      <button class="botao-voltar" onclick="voltarParaEventos()">Voltar</button>
+    </main>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/qrcodejs/qrcode.min.js"></script>
+  <script src="eventos.js"></script>
+</body>
+</html>

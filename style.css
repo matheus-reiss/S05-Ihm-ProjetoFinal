@@ -1,0 +1,150 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #000;
+  color: #fff;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  line-height: 1.5;
+}
+
+/* Cabeçalho fixo */
+.topo {
+  background-color: #0071d9;
+  padding: 16px;
+  text-align: center;
+}
+
+.titulo {
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+}
+
+/* Container principal */
+.conteudo {
+  padding: 16px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Cartões */
+.event-card {
+  background-color: #111;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 24px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+  transition: transform 0.2s;
+}
+
+.event-card:hover {
+  transform: scale(1.01);
+}
+
+.event-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+  max-height: 500px;
+  margin: 0 auto;
+}
+
+/* Texto dentro do cartão */
+.event-card h2 {
+  font-size: 18px;
+  color: #fff;
+  padding: 12px 16px 0 16px;
+}
+
+.event-card p {
+  color: #ccc;
+  font-size: 14px;
+  padding: 4px 16px 0 16px;
+}
+
+/* Botões */
+button {
+  all: unset;
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+  padding: 12px 0;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 6px;
+  margin-top: 12px;
+  transition: background-color 0.2s ease;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.botao-azul {
+  background-color: #0071d9;
+  color: white;
+  width: 100%;
+  display: block;
+  padding: 12px;
+  text-align: center;
+}
+
+.botao-azul:hover {
+  background-color: #005bb5;
+}
+
+.botao-voltar {
+  background-color: #222;
+  color: #ccc;
+  border: 1px solid #444;
+  width: 100%;
+  margin-top: 10px;
+  padding: 10px;
+  text-align: center;
+}
+
+.botao-voltar:hover {
+  background-color: #333;
+}
+
+.rodape {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #111;
+  padding: 12px 0;
+  display: flex;
+  justify-content: space-around;
+  border-top: 1px solid #333;
+  z-index: 1000;
+}
+
+.rodape a {
+  color: #ccc;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 14px;
+  transition: color 0.2s;
+}
+
+.rodape a.ativo {
+  color: #0071d9;
+}
+
+#qrcode {
+  display: flex;
+  justify-content: center;
+  margin-top: 16px;
+}
+
+/* Responsividade */
+@media (min-width: 768px) {
+  .conteudo {
+    padding: 32px;
+  }
+}
